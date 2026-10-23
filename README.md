@@ -18,11 +18,11 @@ The analysis leverages two public datasets hosted on **Google BigQuery**:
 1. **NYC Yellow Taxi Trips** (`bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_20*`)
    - Daily aggregated total pickup counts in New York City from **2016 to 2019** (1,461 daily records).
 2. **NOAA Global Surface Summary of the Day (GSOD)** (`bigquery-public-data.noaa_gsod.gsod20*`)
-   - Central Park Weather Station (`WBAN: 94728`, `USAF: 725053`).
+   - Central Park Weather Station (`WBAN: 94728`).
    - Features: Mean Temperature (`temp`), Wind Speed (`wdsp`), Precipitation (`prcp`), and Snow Depth (`sndp`).
 
 ---
-    
+
 ## Pipeline & Methodology
 
 This project combines NYC taxi trip data with historical weather observations to build a unified daily analytical dataset covering **2016–2019**.
@@ -59,7 +59,7 @@ flowchart TD
 - Use SQL and BigQuery for data extraction and aggregation.
 
 ### 2. Data Cleaning & Imputation
-- Convert NOAA sentinel values (`9999.9`, `999.9`, `99.99`) to `NULL`, as applicable to each variable.
+- Convert NOAA placeholder values (`9999.9`, `999.9`, `99.99`) to `NULL`, as applicable to each variable.
 - Impute missing snow depth (`sndp`) with `0.0`.
 - Apply linear interpolation to missing wind speed (`wdsp`) observations.
 
