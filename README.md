@@ -74,11 +74,12 @@ flowchart TD
 - Identify weekly and yearly seasonality.
 
 ### 5. Time Series Analysis & Model Selection
+- Apply the Box-Jenkins methodology.
 - Assess stationarity using the Augmented Dickey-Fuller test and analyze ACF/PACF plots.
 - Identify SARIMA parameters using AIC and BIC.
 - Explore SARIMAX models with exogenous variables and lagged demand features.
 
-### 6. Model Validation & Optimization
+### 6. Model Validations & Optimization
 - Apply time-series cross-validation with rolling windows.
 - Evaluate feature combinations and compare model configurations using RMSE.
 - Select the best-performing model based on validation results.
